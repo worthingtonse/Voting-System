@@ -20,10 +20,10 @@ How the RAIDAX technology can be used to allow people to vote.
 6. At the time of election, Each Voter Registrar puts a ballot in each voter’s RAIDA ballot folder on the RAIDX. 
 7. The ballot consists of:
   * A list of races and the candidates running for each race. Each candidate has a candidate ID.
-  * A voting token for each race.Each token has a unique serial number that can only be used once. 
+  * A voting token for each race. Each token has a unique serial number that can only be used once. 
   * A voter guide that explains how it works and has candidate statements
 8. Voter can see the candidates on their desktop software’s graphical interface and can check the candidates they want to vote for. 
-9. The Voter connects to the RAIDA using their voter ID as the encryption key and requests a Kerberos ticket from every RAIDA using the voting tokens for each race. These tickets prove that the user’s voter tokens are authentic on that RAIDA sever.
+9. The Voter connects to the RAIDA using their voter ID as the encryption key and requests a Kerberos ticket from every RAIDA using the voting tokens for each race. These tickets prove that the user’s voter tokens are authentic on that RAIDA sever. The voter ID and the Voter's IP address are recorded in each of the 25 RAIDAX's databases so that it can be shown who voted and at what IP address. 
 10. The Voter encrypts their ballot 25 times using each RAIDA’s ticket.
 11. The Voter sends each of the 25 RAIDA (minus one) their ballot that has been encrypted by the other RAIDAs tickets.
 12. Each RAIDA contact each of the other RAIDA and presents it with the ticket. The other RAIDA return the ballot unencrypted. (The transmission is encrypted for quantum safe communication)
